@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 
-import 'api_constants.dart';
+import '../utils/constants/app_strings.dart';
 import 'api_factory.dart';
 
 @Injectable(as: ApiFactory)
@@ -9,7 +9,7 @@ class DioFactory extends ApiFactory {
   late Dio dio;
   DioFactory({required this.dio}) {
     final options = BaseOptions(
-      baseUrl: ApiConstants.baseUrl,
+      baseUrl: apiBaseUrl,
       connectTimeout: const Duration(seconds: 20),
       receiveTimeout: const Duration(seconds: 20),
       receiveDataWhenStatusError: true,

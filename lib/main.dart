@@ -1,22 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty/features/screens/characters_screen/characters_screen.dart';
 
-void main() {
-  runApp(const RickAndMorty());
+import 'core/di/di.dart';
+import 'core/utils/app_router.dart';
+
+void main() async {
+  configureDependencies();
+  runApp(RickAndMorty(
+    appRouter: AppRouter(),
+  ));
 }
 
 class RickAndMorty extends StatelessWidget {
-  const RickAndMorty({super.key});
-
+  const RickAndMorty({super.key, required this.appRouter});
+  final AppRouter appRouter;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const CharactersScreen(),
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: appRouter.generateRoute,
     );
   }
 }

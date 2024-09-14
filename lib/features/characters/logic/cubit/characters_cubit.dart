@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:injectable/injectable.dart';
 
 import '../../data/models/character_response.dart';
 import '../../data/repositories/characters_repository.dart';
 
 part 'characters_state.dart';
 
+@injectable
 class CharactersCubit extends Cubit<CharactersState> {
   CharactersCubit({required this.repo}) : super(CharactersInitial());
 

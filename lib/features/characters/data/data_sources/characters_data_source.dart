@@ -1,6 +1,7 @@
 import 'package:injectable/injectable.dart';
-import '../../../../core/utils/constants/app_strings.dart';
+
 import '../../../../core/networking/api_factory.dart';
+import '../../../../core/utils/constants/app_strings.dart';
 import '../models/character_response.dart';
 
 @injectable

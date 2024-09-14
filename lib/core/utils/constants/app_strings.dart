@@ -3,5 +3,5 @@ const homeScreenRouteName = '/';
 const characterDetailsScreenRouteName = '/character_details_screen';
 
 // Api Constants
-const apiBaseUrl = 'https://rickandmortyapi.com';
-const charactersEndPoint = '/api/character';
+const apiBaseUrl = 'https://rickandmortyapi.com/api/';
+const charactersEndPoint = 'character';

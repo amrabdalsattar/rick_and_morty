@@ -16,6 +16,9 @@ import 'package:internet_connection_checker/internet_connection_checker.dart'
 
 import '../../features/characters/data/data_sources/characters_data_source.dart'
     as _i356;
+import '../../features/characters/data/repositories/characters_repository.dart'
+    as _i486;
+import '../../features/characters/logic/cubit/characters_cubit.dart' as _i57;
 import '../networking/api_factory.dart' as _i269;
 import '../networking/dio_factory.dart' as _i103;
 import 'package_module.dart' as _i611;
@@ -38,6 +41,12 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i269.ApiFactory>(() => _i103.DioFactory(dio: gh<_i361.Dio>()));
     gh.factory<_i356.CharactersDataSource>(
         () => _i356.CharactersDataSource(gh<_i269.ApiFactory>()));
+    gh.factory<_i486.CharactersRepository>(() => _i486.CharactersRepository(
+          connectionChecker: gh<_i973.InternetConnectionChecker>(),
+          dataSource: gh<_i356.CharactersDataSource>(),
+        ));
+    gh.factory<_i57.CharactersCubit>(
+        () => _i57.CharactersCubit(repo: gh<_i486.CharactersRepository>()));
     return this;
   }
 }

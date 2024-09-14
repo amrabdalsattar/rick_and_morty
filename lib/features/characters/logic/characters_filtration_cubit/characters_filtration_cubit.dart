@@ -35,7 +35,7 @@ class CharactersFiltrationCubit extends Cubit {
   }
 
   void clearSearch() {
-    searchController.clear();
+    searchController.text = '';
     emit(SearchStopped());
   }
 

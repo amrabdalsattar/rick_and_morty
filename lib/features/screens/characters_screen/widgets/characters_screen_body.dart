@@ -1,10 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../core/utils/shared_components/loading_indicator.dart';
-import '../../../characters/logic/characters_cubit/characters_cubit.dart';
-import '../../../characters/logic/characters_filtration_cubit/characters_filtration_cubit.dart';
-import '../../../characters/presentation/characters_list.dart';
+part of '../characters_screen.dart';
 
 class CharactersScreenBody extends StatelessWidget {
   const CharactersScreenBody({

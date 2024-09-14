@@ -11,10 +11,9 @@ class CharacterImage extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(12),
       child: CachedNetworkImage(
-        height: double.infinity,
         imageUrl: imageUrl,
         placeholder: (_, __) => const LoadingIndicator(),
-        fit: BoxFit.fitHeight,
+        fit: BoxFit.cover,
       ),
     );
   }

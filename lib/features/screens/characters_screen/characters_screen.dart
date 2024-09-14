@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'widgets/custom_app_bar.dart';
 
 import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/shared_components/loading_indicator.dart';
 import '../../characters/logic/characters_cubit/characters_cubit.dart';
 import '../../characters/logic/characters_filtration_cubit/characters_filtration_cubit.dart';
 import '../../../core/di/di.dart';
 
-import 'widgets/characters_screen_body.dart';
+import '../../characters/presentation/characters_list.dart';
+import 'widgets/search_text_field.dart';
+
+part 'widgets/custom_app_bar.dart';
+part 'widgets/characters_screen_body.dart';
 
 class CharactersScreen extends StatefulWidget {
   const CharactersScreen({super.key});

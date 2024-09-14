@@ -5,9 +5,9 @@ import 'core/utils/app_router.dart';
 
 void main() async {
   configureDependencies();
-  runApp(RickAndMorty(
-    appRouter: AppRouter(),
-  ));
+  runApp(
+    RickAndMorty(appRouter: AppRouter()),
+  );
 }
 
 class RickAndMorty extends StatelessWidget {

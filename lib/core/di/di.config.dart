@@ -18,7 +18,8 @@ import '../../features/characters/data/data_sources/characters_data_source.dart'
     as _i356;
 import '../../features/characters/data/repositories/characters_repository.dart'
     as _i486;
-import '../../features/characters/logic/cubit/characters_cubit.dart' as _i57;
+import '../../features/characters/logic/characters_cubit/characters_cubit.dart'
+    as _i57;
 import '../networking/api_factory.dart' as _i269;
 import '../networking/dio_factory.dart' as _i103;
 import 'package_module.dart' as _i611;

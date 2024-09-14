@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:rick_and_morty/features/characters/data/models/character_response.dart';
-import 'package:rick_and_morty/features/characters/presentation/character_widgets/character_image.dart';
+import '../data/models/character_response.dart';
+import 'character_widgets/character_image.dart';
+import 'character_widgets/character_name_footer.dart';
 
 class CharacterCard extends StatelessWidget {
   final Character character;
@@ -17,25 +18,7 @@ class CharacterCard extends StatelessWidget {
           alignment: Alignment.bottomCenter,
           children: [
             CharacterImage(imageUrl: character.image!),
-            Container(
-                padding: const EdgeInsets.all(5),
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                    color: Colors.black54,
-                    borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(12),
-                        bottomRight: Radius.circular(12))),
-                child: Text(
-                  character.name!,
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                  style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                      fontWeight: FontWeight.w700,
-                      height: 1.3),
-                ))
+            CharacterNameFooter(characterName: character.name!)
           ],
         ),
       ),

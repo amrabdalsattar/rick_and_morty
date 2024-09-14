@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty/features/characters/presentation/character_card.dart';
+import 'character_card.dart';
 import '../data/models/character_response.dart';
 
 class CharactersList extends StatelessWidget {

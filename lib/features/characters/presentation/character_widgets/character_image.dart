@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:rick_and_morty/core/utils/shared_components/loading_indicator.dart';
+import '../../../../core/utils/shared_components/loading_indicator.dart';
 
 class CharacterImage extends StatelessWidget {
   final String imageUrl;
